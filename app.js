@@ -4,7 +4,7 @@ MongoClient.connect('mongodb://localhost:27017/test', function(err, db) {
 
 	function randomString(size) {
 		var s = "";
-		var keys = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ+-*=!#$%&";
+		var keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-*=!#$%&";
 		for (var i = 0; i < size; i++){
 			s += keys.charAt(Math.floor(Math.random() * keys.length));
 		}
@@ -15,13 +15,12 @@ MongoClient.connect('mongodb://localhost:27017/test', function(err, db) {
 		var title = randomString(20) + new Date() + '_' + Math.floor((Math.random() * 100));
 
 		var posts = db.collection("posts");
-		// fix up the permalink to not include whitespace
-		var permalink = title.replace(/\s/g, '_');
-		permalink = permalink.replace(/\W/g, '');
+
+		var permalink = title
 
 		// Build a new post
 		var post = {
-			"title" : title,
+			"title" : "MNA || " + title,
 			"author" : randomString(8)+"."+randomString(8) + '@mailsample.com',
 			"body" : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			"permalink" : permalink,
