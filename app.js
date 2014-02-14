@@ -4,7 +4,7 @@ MongoClient.connect('mongodb://localhost:27017/test', function(err, db) {
 
 	function randomString(size) {
 		var s = "";
-		var keys = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ+-*=!"#$%&";
+		var keys = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ+-*=!#$%&";
 		for (var i = 0; i < size; i++){
 			s += keys.charAt(Math.floor(Math.random() * keys.length));
 		}
