@@ -40,6 +40,8 @@ MongoClient.connect('mongodb://localhost:27017/test', function(err, db) {
 
 	var max = 2000000;
 	for (var i = 0; i < max; i++) {
-		save(i);
+		setTimeout(function(){
+			save(i);	
+		},100);
 	};
 });
