@@ -11,17 +11,13 @@ Dependences
 user@host: node install mongodb
 
 
-Usage
+Console Usage
 ======
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
-user@host: node app.js &
+"user@host: node app.js
+
+As library
+======
+StressJS.run();
 
 Run many times as your HDD capacity.
 
