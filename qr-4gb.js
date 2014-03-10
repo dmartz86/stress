@@ -80,4 +80,3 @@ console.log("Random,StartTimeFind,EndTimeFind,DiffTimeFind,StartTimeUpdate,EndTi
 setInterval(function() {
 	query_random();
 }, 200);
-

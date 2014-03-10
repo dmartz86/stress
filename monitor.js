@@ -13,6 +13,9 @@ var Monitor = function() {
  */
 Monitor.start = function() {
 	MongoClient.connect('mongodb://localhost:27017/test', function(err, db) {
+		
+		console.log(new Date())	
+
 		if (err) {
 			console.log("Mongo connecting: " + err);
 			if (db) {
@@ -55,7 +58,7 @@ Monitor.start = function() {
 Monitor.run = function() {
 	setInterval(function() {
 		Monitor.start();
-	}, 1000);
+	}, 10000);
 };
 
 //Exports the object

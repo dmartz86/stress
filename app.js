@@ -35,8 +35,8 @@ StressJS.save = function() {
 				//Selecting the post collection
 				var posts = db.collection("posts");
 
-				var title = StressJS.randomString(20) + new Date() + '_' + Math.floor((Math.random() * 100));
-				var permalink = title;
+				var title = StressJS.randomString(20) + new Date().getTime() + '_' + Math.floor((Math.random() * 100));
+				var permalink = title.replace(/\s/g,'-');
 				var user = {
 					fname : StressJS.randomString(8),
 					lname : StressJS.randomString(8),
