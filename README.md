@@ -26,3 +26,11 @@ Index memory test
 ======
 >use test
 >db.post.ensureIndex("author")
+
+Store test results (lapse 1sec )
+======
+node /stress/qr.js > tabulation.csv
+
+Store test results (lapse 200ms )
+======
+node /stress/qr-4gb.js > tabulation-4GB.csv
