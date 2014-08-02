@@ -1,7 +1,7 @@
 stress js
 ======
 
-Stress test form mongo db with node.
+Stress test for mongodb with nodejs.
 Inserts documents on posts collection.
 At the end you will have more than 4GB to test.
 
